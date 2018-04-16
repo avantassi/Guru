@@ -1,0 +1,133 @@
+.gallery{
+  background: #fff;
+  padding-top: 225px;
+  padding-bottom: 110px;
+
+  &__wrap{
+    text-align: center;
+  }
+
+  &__descr{
+    font-weight: 300;
+    padding-top: 70px;
+  }
+
+  &__content{
+    margin-top: 70px;
+  }
+
+  &__title{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 90px;
+
+    @include phones{
+      align-items: center;
+    }
+
+    @include tablets{
+      flex-direction: column;
+      //margin-top: 30px;
+    }
+  }
+}
+
+.gallery__type-list{
+  display: flex;
+
+  @include tablets{
+    margin-top: 30px;
+  }
+}
+
+.gallery__type-item{
+  margin-left: 30px;
+
+  @include phones{
+    margin-left: 15px;
+  }
+
+  &:first-child{
+    margin-left: 0;
+  }
+}
+
+.gallery__type-link{
+  text-decoration: none;
+  color: #c7c7c7;
+  font-size: 16px;
+  font-weight: 500;
+
+  &:hover{
+    color: #005999;
+    transition: all .5s;
+  }
+
+  &--active{
+    color: #fff;
+    background-color: #005999;
+    padding: 15px 50px;
+    border-radius: 100px;
+    box-shadow: 0 0 10px 0px rgba(19, 120, 191, 1);
+    
+    &:hover{
+      color: #fff;
+    }
+  }
+}
+
+.gallery__list{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @include phones{
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.gallery__item{
+  width: 30%;
+  margin-right: 30px;
+  margin-bottom: 60px;
+
+  @include tablets{
+    width: 45%;
+  }
+
+  @include phones{
+    width: 85%;
+    margin-right: 0;
+  }
+}
+
+.gallery__item:nth-child(3), .gallery__item:nth-child(6){
+  margin-right: 0;
+
+  @include tablets{
+    margin-right: 30px;
+  }
+
+  @include phones{
+    margin-right: 0;
+  }
+}
+
+.gallery__item-name{
+  display: block;
+  margin-top: 20px;
+  font-weight: 700;
+  color: #000;
+}
+
+.gallery__item-descr{
+  font-size: 16px;
+  color: #8c8c8c;
+}
+
+
+
